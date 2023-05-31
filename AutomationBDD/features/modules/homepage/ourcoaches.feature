@@ -27,3 +27,24 @@ Scenario Outline: Reservar un vuelo de clase economica
       | "Round Trip"  | "Blue Skies Airlines" |
       | "One Way"     | "Unified Airlines"    |
       | "One Way"     | "Pangea Airlines"     |
+
+@maximize
+Scenario Outline: Reservar un vuelo de clase negocio
+    When ingreso los campos requeridos como se muestra a Continuacion
+      But selecciono el <Type>
+      |Passengers:        |   4         |
+      |Departing form:    |   Paris     |
+      |On:                |   May 2     |
+      |Arriving In:       |   London  |
+      |Returning:         |   April 29  |
+      But selecciono la clase de servicio "Business class"
+      But selecciono el <Airline>
+      And presionar en el boton "Continue"
+    Then deberia ver el mensaje no hay asientos disponibles
+      And presionar en el boton "Back to Home"
+    Examples:     
+      | Type          | Airline               |
+      | "One Way"     | "Pangea Airlines"     |
+      | "One Way"     | "Unified Airlines"    |
+      | "Round Trip"  | "Blue Skies Airlines" |
+      | "Round Trip"  | "No Preference"       |
