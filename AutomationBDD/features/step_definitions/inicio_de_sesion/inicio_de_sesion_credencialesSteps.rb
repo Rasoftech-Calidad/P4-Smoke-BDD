@@ -1,5 +1,5 @@
 Given('yo accedo a la pagina de MercuryTours') do
-    pending # Write code here that turns the phrase above into concrete actions
+    visit 'http://demo.guru99.com/'
 end
 
 When('accedo al enlace de iniciar sesion') do
