@@ -7,16 +7,19 @@ Background:
     Given acceder a la pagina de "MercuryTours"
       And acceder al enlace "Flights" del menu de opciones
 
+@smoketest
 Scenario: Regresar a la pagina de "MercuryTours" cuando falla la reserva de un vuelo
     When presionar la imagen de boton "Continue->"
       And muestra el mensaje "After flight finder - No Seats Avaialble"
       And presionar la imagen de boton "BACK TO HOME"
     Then acceder a la pagina de "MercuryTours"
 
+@smoketest
 Scenario: Reservar un vuelo por defecto
     When presionar la imagen de boton "Continue->"
     Then muestra el mensaje "After flight finder - No Seats Avaialble"
 
+@smoketest
 Scenario: Buscar vuelo no valido debido a fecha de salida adelantada a la fecha de llegada
     When ingrese los campos requeridos como se muestra a continuación para el vuelo
       | Type:           | Round Trip     |
@@ -30,6 +33,7 @@ Scenario: Buscar vuelo no valido debido a fecha de salida adelantada a la fecha 
       And presionar la imagen de boton "Continue->"
     Then muestra el mensaje "Invalid Date Range"
 
+@smoketest
 Scenario: Reservar un vuelo totalmente personalizado
     When ingrese los campos requeridos como se muestra a continuación para el vuelo
       | Type:           |  One Way            |
@@ -43,6 +47,7 @@ Scenario: Reservar un vuelo totalmente personalizado
       And presionar la imagen de boton "Continue->"
     Then muestra el mensaje "After flight finder - No Seats Avaialble"
 
+@smoketest
 Scenario: Buscar un vuelo en un dia inexistente
     When ingrese los campos requeridos como se muestra a continuación para el vuelo
       | Type:           |  One Way            |
@@ -56,6 +61,7 @@ Scenario: Buscar un vuelo en un dia inexistente
       And presionar la imagen de boton "Continue->"
     Then muestra el mensaje "Invalid Date"
 
+@smoketest
 @iniciar_sesion_usuario
 Scenario: Reservar un vuelo con un usuario ya registrado
     When ingrese los campos requeridos como se muestra a continuación para el vuelo
