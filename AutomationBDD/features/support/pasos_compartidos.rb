@@ -35,8 +35,3 @@ end
 And('se muestra el mensaje "This section of our web site is currently under construction.   Sorry for any inconvienece."') do
   expect(page).to have_content('This section of our web site is currently under construction.   Sorry for any inconvienece.')
 end
-
-#se muestra el mensaje "Use our Flight Finder to search for the lowest fare on participating airlines. Once you've booked your flight, don't forget to visit the Mercury Tours Hotel Finder to reserve lodging in your destination city."
-#And('se muestra el mensaje "Use our Flight Finder to search for the lowest fare on participating airlines. Once you've booked your flight, don't forget to visit the Mercury Tours Hotel Finder to reserve lodging in your destination city."') do
- # expect(page).to have_content('Use our Flight Finder to search for the lowest fare on participating airlines. Once you've booked your flight, don't forget to visit the Mercury Tours Hotel Finder to reserve lodging in your destination city.')
-#end
