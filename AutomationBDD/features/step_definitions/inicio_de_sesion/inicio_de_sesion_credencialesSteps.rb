@@ -3,8 +3,12 @@ Given('yo accedo a la pagina de MercuryTours') do
     visit 'http://demo.guru99.com/test/newtours/'
 end
 
-When('ingreso un hola y hola correctos') do
-    pending # Write code here that turns the phrase above into concrete actions
+# And ingreso un "<usuario>" y "<contraseña>" correctos
+When('ingreso un {string} y {string} correctos') do |string, string2|
+    username_input = 'body > div:nth-child(5) > table > tbody > tr > td:nth-child(2) > table > tbody > tr:nth-child(4) > td > table > tbody > tr > td:nth-child(2) > table > tbody > tr:nth-child(5) > td > form > table > tbody > tr:nth-child(1) > td:nth-child(2) > input'
+    password_input = 'body > div:nth-child(5) > table > tbody > tr > td:nth-child(2) > table > tbody > tr:nth-child(4) > td > table > tbody > tr > td:nth-child(2) > table > tbody > tr:nth-child(5) > td > form > table > tbody > tr:nth-child(2) > td:nth-child(2) > input[type=password]'
+    find(:css, username_input).fill_in with: string
+    find(:css, password_input).fill_in with: string2
 end
 
 When('presiono el boton {string}') do |string|

@@ -9,13 +9,14 @@ Background:
 @actual
 Scenario Outline: Iniciar sesion exitosamente desde pagina de inicio de sesion
     When acceder al enlace "SIGN-ON" de la barra de navegacion
-    And ingreso un <Usuario> y <Contraseña> correctos
+    And ingreso un "<usuario>" y "<contraseña>" correctos
     And presiono el boton "Submit"
     Then deberia ver el mensaje "Login Succesfully"
     And ver el boton de cerrar sesion
 Examples:
-    | Usuario | Contraseña |
+    | usuario | contraseña |
     | hola | hola    |
+    | hola | chau    |
 
 Scenario: Iniciar sesion con credenciales incorrectos desde pagina de inicio de sesion
     When accedo al enlace de "SIGN-ON" para iniciar sesion
