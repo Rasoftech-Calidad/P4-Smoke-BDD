@@ -10,7 +10,7 @@ Para esto se utilizo:
 
 Tambien se definieron las pruebas que son parte del smoketest.
 
-Enlace del sitio: https://demo.guru99.com/test/newtours
+Enlace del sitio MercuryTours: https://demo.guru99.com/test/newtours
 
 [![My Skills](https://skillicons.dev/icons?i=ruby)](https://skillicons.dev)
 ![alt text][cucumber]
