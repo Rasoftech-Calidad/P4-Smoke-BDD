@@ -11,8 +11,9 @@ When('ingreso un {string} y {string} correctos') do |string, string2|
     find(:css, password_input).fill_in with: string2
 end
 
+# And presiono el boton "Submit"
 When('presiono el boton {string}') do |string|
-    pending # Write code here that turns the phrase above into concrete actions
+    click_button(string)
 end
 
 Then('deberia ver el mensaje {string}') do |string|
