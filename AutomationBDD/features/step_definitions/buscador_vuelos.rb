@@ -1,19 +1,24 @@
-#Given accedo al enlace de "Flights"
-Given(/^accedo al enlace de "Flights"$/) do
+#Given acceder a la pagina de MercuryTours
+Given(/^acceder a la pagina de MercuryTours$/) do
     page.driver.browser.manage.window.maximize
-    visit('https://demo.guru99.com/test/newtours/reservation.php')
+    visit('http://demo.guru99.com/test/newtours/')
 
 end
 
-#When ingreso los campos requeridos como se muestra a Continuacion
-When(/^ingreso los campos requeridos como se muestra a Continuacion$/) do |table|
+#Given acceder al enlace "Flights"
+Given(/^acceder al enlace "([^"]*)"$/) do |linkText|
+    click_link(linkText)
+  end
+
+#When ingrese los campos requeridos como se muestra a continuación
+When(/^ingrese los campos requeridos como se muestra a continuación$/) do |table|
     data = table.rows_hash
     data.each_pair do |key, value|
       case key
         when "Type:"
             select(value, :from => 'roundtrip')
         when "Passengers:"
-            select(value, :from => 'passCount'  )
+            select(value, :from => 'passCount')
         when "Departing From:"
             select(value, :from => 'fromPort')
         when "On:"

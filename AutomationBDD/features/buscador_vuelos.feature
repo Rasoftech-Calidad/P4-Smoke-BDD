@@ -1,7 +1,7 @@
 Feature: Buscador de vuelos en MercuryTours
     As un usuario Comun
     I reservar un vuelo en el sitio de MercuryTours
-    so poder personalizar el vuelo, preferencia y aerolinea
+    so poder personalizar el vuelo o buscarlo
 
 Background:
     Given acceder a la pagina de MercuryTours
