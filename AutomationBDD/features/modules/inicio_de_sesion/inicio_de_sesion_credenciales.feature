@@ -6,17 +6,16 @@ Feature: Inicio De Sesion Con Credenciales
 Background:
     Given acceder a la pagina de "MercuryTours"
 
-@actual
+@smoketest
 Scenario Outline: Iniciar sesion exitosamente desde pagina de inicio de sesion
     When acceder al enlace "SIGN-ON" de la barra de navegacion
     And ingreso un "<usuario>" y "<contraseña>" correctos
     And presiono el boton "Submit"
-    Then deberia ver el mensaje "Login Succesfully"
+    Then deberia ver el mensaje "Login Successfully"
     And ver el boton de cerrar sesion
 Examples:
     | usuario | contraseña |
     | hola | hola    |
-    | hola | chau    |
 
 Scenario Outline: Iniciar sesion con credenciales incorrectos desde pagina de inicio de sesion
     When accedo al enlace de "SIGN-ON" para iniciar sesion

@@ -16,12 +16,15 @@ When('presiono el boton {string}') do |string|
     click_button(string)
 end
 
+# Then deberia ver el mensaje "Login Succesfully"
 Then('deberia ver el mensaje {string}') do |string|
-    pending # Write code here that turns the phrase above into concrete actions
+    puts 'TEEESSTTTT'
+    puts string
+    expect(page).to have_content(string)
 end
 
 Then('ver el boton de cerrar sesion') do
-    pending # Write code here that turns the phrase above into concrete actions
+    expect(page).to have_content('SIGN-OFF')
 end
 
 # When accedo al enlace de "SIGN-ON" para iniciar sesion
