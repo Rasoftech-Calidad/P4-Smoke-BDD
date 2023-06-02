@@ -46,3 +46,18 @@ Scenario: Reservar un vuelo totalmente personalizado
       | Airline:        | Blue Skies Airlines |
       And presionar la imagen de boton "Continue->"
     Then muestra el mensaje "After flight finder - No Seats Avaialble"
+
+@maximize
+@iniciar_sesion_usuario
+Scenario: Encontrar un vuelo con un usuario ya registrado
+    When ingrese los campos requeridos como se muestra a continuación para el vuelo
+      | Type:           | Round Trip     |
+      | Passengers:     | 1              |
+      | Departing form: | Acapulco       |
+      | On:             | July 12        |
+      | Arriving In:    | Acapulco       |
+      | Returning:      | July 12        | 
+      | Service Class:  | Business class |
+      | Airline:        | No Preference  |
+      And presionar la imagen de boton "Continue->"
+    Then muestra el mensaje "After flight finder - No Seats Avaialble"
