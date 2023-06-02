@@ -17,6 +17,7 @@ Examples:
     | usuario | contraseña |
     | hola | hola    |
 
+@actual
 Scenario Outline: Iniciar sesion con credenciales incorrectos desde pagina de inicio de sesion
     When acceder al enlace "SIGN-ON" de la barra de navegacion
     And ingreso un "<usuario>" y "<contraseña>" incorrectos
@@ -24,7 +25,7 @@ Scenario Outline: Iniciar sesion con credenciales incorrectos desde pagina de in
     Then deberia ver el mensaje "Enter your userName and password correct"
 Examples:
     | usuario | contraseña |
-    | hola | hola    |
+    | incorrectuserX71 | incorrectpassX71    |
 
 Scenario Outline: Iniciar sesion con credenciales correctos desde la pagina principal
     When quiero iniciar sesion desde los campos de entrada en la pagina principal de MercuryTours
