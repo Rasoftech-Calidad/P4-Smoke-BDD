@@ -1,10 +1,15 @@
-
 After do 
-    Capybara.current_session.driver.quit
+  Capybara.current_session.driver.quit
 end
-
 
 Before '@maximize' do
   page.driver.browser.manage.window.maximize
 end
 
+Before '@iniciar_sesion_usuario' do
+  visit('/')
+  click_link('SIGN-ON')
+  fill_in 'userName', with: ENV['USER']
+  fill_in 'password', with: ENV['PSW']
+  click_button('Submit')
+end
