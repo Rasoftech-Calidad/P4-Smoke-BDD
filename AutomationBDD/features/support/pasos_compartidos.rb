@@ -17,7 +17,7 @@ end
   
 #Volver a la pagina principal de "MercuryTours"
 And(/^presionar la imagen de boton "BACK TO HOME"$/) do
-  xpath = 'body > div:nth-child(5) > table > tbody > tr > td:nth-child(2) > table > tbody > tr:nth-child(4) > td > table > tbody > tr:nth-child(1) > td:nth-child(2) > table > tbody > tr:nth-child(4) > td > a > img'
+  xpath = '/html/body/div[2]/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr[1]/td[2]/table/tbody/tr[2]/td/a/img'
   find(:xpath, xpath).click
 end
 
