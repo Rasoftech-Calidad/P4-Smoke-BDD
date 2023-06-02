@@ -4,16 +4,10 @@ When(/^presionar la imagen de boton "Continue->"$/) do
     find(:xpath, xpath).click
 end
 
-    #Then muestra el mensaje "After flight finder - No Seats Avaialble"
-    And('muestra el mensaje "After flight finder - No Seats Avaialble"') do
-        expect(page).to have_content('After flight finder - No Seats Avaialble')
-    end
-
-    #Then presionar la imagen de boton "BACK TO HOME"
-    And(/^presionar la imagen de boton "BACK TO HOME"$/) do
-        xpath = '/html/body/div[2]/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr[1]/td[2]/table/tbody/tr[2]/td/a/img'
-        find(:xpath, xpath).click
-    end
+#Then muestra el mensaje "After flight finder - No Seats Avaialble"
+And('muestra el mensaje "After flight finder - No Seats Avaialble"') do
+    expect(page).to have_content('After flight finder - No Seats Avaialble')
+end
 
 #When ingrese los campos requeridos como se muestra a continuación para el vuelo
 When('ingrese los campos requeridos como se muestra a continuación para el vuelo') do |table|

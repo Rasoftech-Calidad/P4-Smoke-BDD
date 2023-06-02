@@ -5,21 +5,18 @@ Feature: Buscador de vuelos en "MercuryTours"
 
 Background:
     Given acceder a la pagina de "MercuryTours"
-      And acceder al enlace "Flights" link
+      And acceder al enlace "Flights" del menu de opciones
 
-@maximize
 Scenario: regresar a la pagina de "MercuryTours" cuando falla la reserva de un vuelo
     When presionar la imagen de boton "Continue->"
       And muestra el mensaje "After flight finder - No Seats Avaialble"
       And presionar la imagen de boton "BACK TO HOME"
     Then acceder a la pagina de "MercuryTours"
 
-@maximize
 Scenario: reservar un vuelo por defecto
     When presionar la imagen de boton "Continue->"
     Then muestra el mensaje "After flight finder - No Seats Avaialble"
 
-@maximize
 Scenario: Buscar vuelo no valido debido a fecha de salida adelantada a la fecha de llegada
     When ingrese los campos requeridos como se muestra a continuación para el vuelo
       | Type:           | Round Trip     |
@@ -33,7 +30,6 @@ Scenario: Buscar vuelo no valido debido a fecha de salida adelantada a la fecha 
       And presionar la imagen de boton "Continue->"
     Then muestra el mensaje "After flight finder - No Seats Avaialble"
 
-@maximize
 Scenario: Reservar un vuelo totalmente personalizado
     When ingrese los campos requeridos como se muestra a continuación para el vuelo
       | Type:           |  One Way            |
@@ -47,7 +43,6 @@ Scenario: Reservar un vuelo totalmente personalizado
       And presionar la imagen de boton "Continue->"
     Then muestra el mensaje "After flight finder - No Seats Avaialble"
 
-@maximize
 @iniciar_sesion_usuario
 Scenario: Encontrar un vuelo con un usuario ya registrado
     When ingrese los campos requeridos como se muestra a continuación para el vuelo
