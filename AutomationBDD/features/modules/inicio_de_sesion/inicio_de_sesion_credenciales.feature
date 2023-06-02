@@ -18,7 +18,7 @@ Examples:
     | hola | hola    |
 
 Scenario Outline: Iniciar sesion con credenciales incorrectos desde pagina de inicio de sesion
-    When accedo al enlace de "SIGN-ON" para iniciar sesion
+    When acceder al enlace "SIGN-ON" de la barra de navegacion
     And ingreso un "<usuario>" y "<contraseña>" incorrectos
     And presiono el boton "Submit"
     Then deberia ver el mensaje "Enter your userName and password correct"
