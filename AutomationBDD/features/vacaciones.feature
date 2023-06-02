@@ -7,10 +7,6 @@ Background:
     Given acceder a la pagina de "MercuryTours"
       And acceder al enlace "Vacations" del menu de opciones
 
-Scenario: Acceder a la pagina de vacaciones
-    Then se muestra la imagen "UNDER CONSTRUCTION"
-      And se muestra el mensaje "This section of our web site is currently under construction.   Sorry for any inconvienece."
-    
 Scenario: Regresar a la pagina de "MercuryTours" cuando falla la pagina de vacaciones
     Then se muestra la imagen "UNDER CONSTRUCTION"
       And se muestra el mensaje "This section of our web site is currently under construction.   Sorry for any inconvienece."
