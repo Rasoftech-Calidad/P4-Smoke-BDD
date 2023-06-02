@@ -32,3 +32,17 @@ Scenario: Buscar vuelo no valido debido a fecha de salida adelantada a la fecha 
       | Airline:        | No Preference  |
       And presionar la imagen de boton "Continue->"
     Then muestra el mensaje "After flight finder - No Seats Avaialble"
+
+@maximize
+Scenario: Reservar un vuelo totalmente personalizado
+    When ingrese los campos requeridos como se muestra a continuación para el vuelo
+      | Type:           |  One Way            |
+      | Passengers:     |  4                  |
+      | Departing form: |  Zurich             |
+      | On:             |  December 31        |
+      | Arriving In:    |  Zurich             |
+      | Returning:      |  December 31        | 
+      | Service Class:  | First class         |
+      | Airline:        | Blue Skies Airlines |
+      And presionar la imagen de boton "Continue->"
+    Then muestra el mensaje "After flight finder - No Seats Avaialble"
