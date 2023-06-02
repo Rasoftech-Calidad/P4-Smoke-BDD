@@ -42,3 +42,13 @@ When('ingrese los campos requeridos como se muestra a continuación para el vuel
       end
     end
 end
+
+#Then muestra el mensaje "Invalid Date Range"
+Then('muestra el mensaje "Invalid Date Range"') do
+  expect(page).to have_content('Invalid Date Range')
+end
+
+#Then muestra el mensaje "Invalid Date"
+Then('muestra el mensaje "Invalid Date"') do
+  expect(page).to have_content('Invalid Date')
+end

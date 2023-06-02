@@ -28,7 +28,7 @@ Scenario: Buscar vuelo no valido debido a fecha de salida adelantada a la fecha 
       | Service Class:  | Business class |
       | Airline:        | No Preference  |
       And presionar la imagen de boton "Continue->"
-    Then muestra el mensaje "After flight finder - No Seats Avaialble"
+    Then muestra el mensaje "Invalid Date Range"
 
 Scenario: Reservar un vuelo totalmente personalizado
     When ingrese los campos requeridos como se muestra a continuación para el vuelo
@@ -54,7 +54,7 @@ Scenario: Buscar un vuelo en un dia inexistente
       | Service Class:  | First class         |
       | Airline:        | Blue Skies Airlines |
       And presionar la imagen de boton "Continue->"
-    Then muestra el mensaje "After flight finder - No Seats Avaialble"
+    Then muestra el mensaje "Invalid Date"
 
 @iniciar_sesion_usuario
 Scenario: Reservar un vuelo con un usuario ya registrado
