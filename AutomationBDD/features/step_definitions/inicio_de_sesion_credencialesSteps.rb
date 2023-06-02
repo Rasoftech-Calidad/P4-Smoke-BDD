@@ -36,7 +36,6 @@ When('ingreso un {string} y {string} incorrectos en la pagina principal') do |st
     find(:xpath, username_input).click
     find(:xpath, username_input).fill_in with: string
     find(:xpath, password_input).fill_in with: string2
-    puts 'TTEEESSTT'
 end
 
 # And presiono el boton "Submit"
