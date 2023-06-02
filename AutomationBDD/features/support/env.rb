@@ -3,7 +3,7 @@ require 'capybara'
 require 'capybara/dsl'
 require 'capybara/cucumber'
 #require 'capybara-screenshot/cucumber'
-require_relative 'shared_steps'
+require_relative 'pasos_compartidos'
 
 #PTravel Settings
 ENV['USER']="Rasoftech"
