@@ -20,7 +20,7 @@ Scenario: Reservar un vuelo de clase economica
       And seleccione el campo de entrada No Preference en "Airline"
       And presionar en el boton "Continue->"
     Then deberia ver el mensaje After flight finder - No Seats Avaialble
-      And presionar en el boton "Back to Home"
+      And presionar la imagen de boton "Back to Home"
 
 @maximize
 Scenario: Reservar un vuelo de clase negocio
@@ -35,7 +35,7 @@ Scenario: Reservar un vuelo de clase negocio
       | Airline:        | No Preference   |
       And presionar en el boton "Continue->"
     Then deberia ver el mensaje After flight finder - No Seats Avaialble
-      And presionar en el boton "Back to Home"
+      And presionar la imagen de boton "Back to Home"
 
 @maximize
 Scenario Outline: Reservar un vuelo de primera clase
@@ -50,7 +50,7 @@ Scenario Outline: Reservar un vuelo de primera clase
       And selecciono el <Airline>
       And presionar en el boton "Continue->"
     Then deberia ver el mensaje After flight finder - No Seats Avaialble
-      And presionar en el boton "Back to Home"
+      And presionar la imagen de boton "Back to Home"
     Examples:     
       | Type          | Service Class | Airline               |
       | "Round Trip"  | "First class" | "No Preference"       |
