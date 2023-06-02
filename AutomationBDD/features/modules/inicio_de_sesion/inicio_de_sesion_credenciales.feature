@@ -4,11 +4,11 @@ Feature: Inicio De Sesion Con Credenciales
     so yo pueda Encontrar mejores ofertas y beneficios por estar registrado
 
 Background:
-    Given yo accedo a la pagina de MercuryTours
+    Given acceder a la pagina de "MercuryTours"
 
 @actual
 Scenario Outline: Iniciar sesion exitosamente desde pagina de inicio de sesion
-    When accedo al enlace de "Sign-On" para iniciar sesion
+    When accedo al enlace de "SIGN-ON" para iniciar sesion
     And ingreso un <Usuario> y <Contraseña> correctos
     And presiono el boton "Submit"
     Then deberia ver el mensaje "Login Succesfully"
@@ -16,7 +16,6 @@ Scenario Outline: Iniciar sesion exitosamente desde pagina de inicio de sesion
 Examples:
     | Usuario | Contraseña |
     | hola | hola    |
-    | hola | chau    |
 
 Scenario: Iniciar sesion con credenciales incorrectos desde pagina de inicio de sesion
     When accedo al enlace de "SIGN-ON" para iniciar sesion
