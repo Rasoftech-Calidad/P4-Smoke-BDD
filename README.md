@@ -7,6 +7,7 @@ Para esto se utilizo:
 -  Cucumber
 -  Ruby
 -  Capybara
+-  Selenium web driver para Chrome
 
 Tambien se definieron las pruebas que son parte del smoketest.
 
