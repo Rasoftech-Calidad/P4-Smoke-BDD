@@ -50,7 +50,7 @@ Scenario: Buscar un vuelo en un dia inexistente
       | Departing form: |  Zurich             |
       | On:             |  February 31        |
       | Arriving In:    |  Zurich             |
-      | Returning:      |  April 10        | 
+      | Returning:      |  April 10           | 
       | Service Class:  | First class         |
       | Airline:        | Blue Skies Airlines |
       And presionar la imagen de boton "Continue->"
