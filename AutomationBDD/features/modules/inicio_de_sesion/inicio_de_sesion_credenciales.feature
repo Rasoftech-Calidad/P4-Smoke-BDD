@@ -14,8 +14,9 @@ Scenario Outline: Iniciar sesion exitosamente desde pagina de inicio de sesion
     Then deberia ver el mensaje "Login Successfully"
     And ver el boton de cerrar sesion
 Examples:
-    | usuario | contraseña |
-    | hola | hola    |
+    | usuario      | contraseña |
+    | hola         | hola       |
+    | Rasoftech    | Soporte!23 |
 
 @smoketest
 Scenario Outline: Iniciar sesion con credenciales incorrectos desde pagina de inicio de sesion
@@ -24,10 +25,11 @@ Scenario Outline: Iniciar sesion con credenciales incorrectos desde pagina de in
     And presiono el boton "Submit"
     Then deberia ver el mensaje "Enter your userName and password correct"
 Examples:
-    | usuario | contraseña |
+    | usuario          | contraseña          |
     | incorrectuserX71 | incorrectpassX71    |
+    |                  |                     |
 
-@actual
+@smoketest
 Scenario Outline: Iniciar sesion con credenciales correctos desde la pagina principal
     When quiero iniciar sesion desde los campos de entrada en la pagina principal de MercuryTours
     And ingreso un "<usuario>" y "<contraseña>" correctos en la pagina principal
@@ -35,18 +37,17 @@ Scenario Outline: Iniciar sesion con credenciales correctos desde la pagina prin
     Then deberia ver el mensaje "Login Successfully"
     And ver el boton de cerrar sesion
 Examples:
-    | usuario | contraseña |
-    | hola | hola    |
+    | usuario      | contraseña |
+    | hola         | hola       |
+    | Rasoftech    | Soporte!23 |
 
+@smoketest
 Scenario Outline: Iniciar sesion con credenciales incorrectos desde la pagina principal
-    When estoy en la pagina principal
+    When quiero iniciar sesion desde los campos de entrada en la pagina principal de MercuryTours
     And ingreso un "<usuario>" y "<contraseña>" incorrectos en la pagina principal
     And presiono el boton "Submit"
     Then deberia ver el mensaje "Enter your userName and password correct"
 Examples:
-    | usuario | contraseña |
-    | hola | hola    |
-
-
-
-# Agregar escenario exlusivo para probar que el signoff se encuentre en cada vista
+    | usuario          | contraseña          |
+    | incorrectuserX71 | incorrectpassX71    |
+    |                  |                     |
