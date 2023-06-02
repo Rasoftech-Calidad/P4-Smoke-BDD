@@ -14,3 +14,5 @@ end
         xpath = '/html/body/div[2]/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr[1]/td[2]/table/tbody/tr[2]/td/a/img'
         find(:xpath, xpath).click
     end
+
+    

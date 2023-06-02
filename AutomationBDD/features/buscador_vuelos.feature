@@ -13,3 +13,8 @@ Scenario: regresar a la pagina de "MercuryTours" cuando falla la reserva de un v
       And muestra el mensaje "After flight finder - No Seats Avaialble"
       And presionar la imagen de boton "BACK TO HOME"
     Then acceder a la pagina de "MercuryTours"
+
+@maximize
+Scenario: reservar un vuelo por defecto
+    When presionar la imagen de boton "Continue->"
+    Then muestra el mensaje "After flight finder - No Seats Avaialble"
