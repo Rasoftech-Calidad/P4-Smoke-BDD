@@ -1,5 +1,8 @@
 # P4-Smoke-BDD
 Practica #4 de la materia de gestion de calidad. Realizar smoke testing, usando BDD para establecer lenguaje comun y automatizar pruebas.
+# Enlaces
+Trello: https://trello.com/b/ohBNgY0x/practica-4-automatizaci%C3%B3n
+DEMO: https://docs.google.com/presentation/d/1Vek6z-hKZ_PFNzgZfhhzb9xz_rdaB1cc/edit?usp=sharing&ouid=115374638990980240919&rtpof=true&sd=true
 
 Este proyecto consiste en crear escenarios de prueba para el sitio "Mercury tours" y automatizarlas
 Para esto se utilizo:
