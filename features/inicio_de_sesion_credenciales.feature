@@ -7,7 +7,7 @@ Background:
     Given acceder a la pagina de "MercuryTours"
 
 @smoketest
-Scenario Outline: Iniciar sesion exitosamente desde pagina de inicio de sesion
+Scenario Outline: Iniciar sesion exitosamente desde el menu "SIGN-ON"
     When acceder al enlace "SIGN-ON" de la barra de navegacion
     And ingreso un "<usuario>" y "<contraseña>" correctos
     And presiono el boton "Submit"
@@ -19,7 +19,7 @@ Examples:
     | _*/+Rasoftech-!';    | _*/+Soporte-!' |
 
 @smoketest
-Scenario Outline: Iniciar sesion con credenciales incorrectos desde pagina de inicio de sesion
+Scenario Outline: Iniciar sesion con credenciales incorrectos desde el menu "SIGN-ON"
     When acceder al enlace "SIGN-ON" de la barra de navegacion
     And ingreso un "<usuario>" y "<contraseña>" incorrectos
     And presiono el boton "Submit"
@@ -29,7 +29,7 @@ Examples:
     | incorrectuserX71 | incorrectpassX71    |
 
 @smoketest
-Scenario Outline: Iniciar sesion con credenciales correctos desde la pagina principal
+Scenario Outline: Iniciar sesion con credenciales correctos desde el menu "Home"
     When quiero iniciar sesion desde los campos de entrada en la pagina principal de MercuryTours
     And ingreso un "<usuario>" y "<contraseña>" correctos en la pagina principal
     And presiono el boton "Submit"
@@ -41,7 +41,7 @@ Examples:
     | _*/+Rasoftech-!';    | _*/+Soporte-!' |
 
 @smoketest
-Scenario Outline: Iniciar sesion con credenciales incorrectos desde la pagina principal
+Scenario Outline: Iniciar sesion con credenciales incorrectos desde el menu "Home"
     When quiero iniciar sesion desde los campos de entrada en la pagina principal de MercuryTours
     And ingreso un "<usuario>" y "<contraseña>" incorrectos en la pagina principal
     And presiono el boton "Submit"
