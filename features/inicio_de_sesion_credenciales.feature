@@ -14,9 +14,9 @@ Scenario Outline: Iniciar sesion exitosamente desde pagina de inicio de sesion
     Then deberia ver el mensaje "Login Successfully"
     And ver el boton de cerrar sesion
 Examples:
-    | usuario      | contraseña |
-    | hola         | hola       |
-    | Rasoftech    | Soporte!23 |
+    | usuario              | contraseña     |
+    | Rasoftech            | Soporte!23     |
+    | _*/+Rasoftech-!';    | _*/+Soporte-!' |
 
 @smoketest
 Scenario Outline: Iniciar sesion con credenciales incorrectos desde pagina de inicio de sesion
@@ -36,9 +36,9 @@ Scenario Outline: Iniciar sesion con credenciales correctos desde la pagina prin
     Then deberia ver el mensaje "Login Successfully"
     And ver el boton de cerrar sesion
 Examples:
-    | usuario      | contraseña |
-    | hola         | hola       |
-    | Rasoftech    | Soporte!23 |
+    | usuario              | contraseña     |
+    | Rasoftech            | Soporte!23     |
+    | _*/+Rasoftech-!';    | _*/+Soporte-!' |
 
 @smoketest
 Scenario Outline: Iniciar sesion con credenciales incorrectos desde la pagina principal
