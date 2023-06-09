@@ -1,15 +1,12 @@
-#When presionar la imagen de boton "Continue->"
-When(/^presionar la imagen de boton "Continue->"$/) do
-    xpath = '/html/body/div[2]/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[5]/td/form/table/tbody/tr[14]/td/input'
-    find(:xpath, xpath).click
+# Reservar un vuelo por defecto
+And(/^se muestra la imagen "FLIGHT FINDER"$/) do
+  expect(page).to have_xpath('//img[@src="images/mast_flightfinder.gif"]')
 end
 
-#Then muestra el mensaje "After flight finder - No Seats Avaialble"
-And('muestra el mensaje "After flight finder - No Seats Avaialble"') do
-    expect(page).to have_content('After flight finder - No Seats Avaialble')
-end
-
-#When ingrese los campos requeridos como se muestra a continuación para el vuelo
+# Buscar vuelo no valido debido a fecha de salida adelantada a la fecha de llegada
+# Reservar un vuelo totalmente personalizado
+# Buscar un vuelo en un dia inexistente
+# Reservar un vuelo con un usuario ya registrado
 When('ingrese los campos requeridos como se muestra a continuación para el vuelo') do |table|
     data = table.rows_hash
     data.each_pair do |key, value|
@@ -41,14 +38,4 @@ When('ingrese los campos requeridos como se muestra a continuación para el vuel
         select value, from: 'airline'
       end
     end
-end
-
-#Then muestra el mensaje "Invalid Date Range"
-Then('muestra el mensaje "Invalid Date Range"') do
-  expect(page).to have_content('Invalid Date Range')
-end
-
-#Then muestra el mensaje "Invalid Date"
-Then('muestra el mensaje "Invalid Date"') do
-  expect(page).to have_content('Invalid Date')
 end

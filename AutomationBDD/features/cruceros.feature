@@ -5,18 +5,17 @@ Feature: Acceder a cruceros en "MercuryTours"
 
 Background:
     Given acceder a la pagina de "MercuryTours"
-      And acceder al enlace "Cruises" del menu de opciones
+    When acceder al enlace "Cruises" del menu de opciones
 
 Scenario: Reservar un crucero en el sitio web
-    Then se muestra el mensaje "Welcome, your cruise has already been confirmed on the day and time. To travel!"
-      And presionar la imagen de boton "BACK TO HOME"
+    Then se muestra el mensaje "Always carry a travel first aid kit with bandages, antacids, aspirin, bee sting wipes, and other basic necessities." en el sitio web
+      And se muestra la imagen "ARUBA"
 
 Scenario: Regresar a la pagina de "MercuryTours" cuando falla la pagina de cruceros
-    Then se muestra la imagen "UNDER CONSTRUCTION"
-      And se muestra el mensaje "This section of our web site is currently under construction.   Sorry for any inconvienece."
-      And presionar la imagen de boton "BACK TO HOME"
+    Then se muestra el mensaje "This section of our web site is currently under construction.   Sorry for any inconvienece." en el sitio web
+      And se muestra la imagen "UNDER CONSTRUCTION"
+      And presionar la imagen de boton "BACK TO HOME" para volver
 
 @iniciar_sesion_usuario
 Scenario: Acceder a la pagina de cruceros como un usuario ya registrado
-  Then se muestra la imagen "UNDER CONSTRUCTION"
-    And se muestra el mensaje "This section of our web site is currently under construction.   Sorry for any inconvienece."
+    Then se muestra el mensaje "Welcome to Cruises" en el sitio web
