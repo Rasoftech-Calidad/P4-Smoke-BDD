@@ -4,17 +4,17 @@ Given(/^acceder a la pagina de "MercuryTours"$/) do
   visit('/')
 end
   
-# carros_renta, cruceros, destinos, hoteles, vacaciones
+# carros_renta, cruceros, destinos, hoteles, vacaciones, itinerarios
 When(/^acceder al enlace "([^"]*)" del menu de opciones$/) do |linkText|
   click_link(linkText)
 end
 
-# contacto
+# contacto, itinerarios
 When(/^acceder al enlace "([^"]*)" de la barra de navegacion$/) do |linkText|
   click_link(linkText)
 end
 
-# carros_renta, contacto, cruceros, destinos, hoteles, vacaciones
+# carros_renta, contacto, cruceros, destinos, hoteles, vacaciones, itinerarios
 Then(/^se muestra el mensaje "([^"]*)" en el sitio web$/) do |message|
   expect(page).to have_content(message)
 end
@@ -30,7 +30,13 @@ And(/^presionar la imagen de boton "BACK TO HOME" para volver$/) do
   find(:xpath, xpath).click
 end
 
-# 
+# itinerarios
 And(/^se muestra la imagen "FLIGHT FINDER"$/) do
   expect(page).to have_xpath('//img[@src="images/mast_flightfinder.gif"]')
+end
+
+# itinerarios
+Then(/^presionar la imagen de boton "Continue->" para continuar$/) do
+  xpath = '/html/body/div[2]/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[5]/td/form/table/tbody/tr[14]/td/input'
+  find(:xpath, xpath).click
 end
