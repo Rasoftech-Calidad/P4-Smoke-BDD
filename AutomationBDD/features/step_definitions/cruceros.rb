@@ -1,4 +1,4 @@
-#Then se muestra el mensaje "Welcome, your cruise has already been confirmed on the day and time. To travel!"
-Then('se muestra el mensaje "Welcome, your cruise has already been confirmed on the day and time. To travel!"') do
-    expect(page).to have_content('Welcome, your cruise has already been confirmed on the day and time. To travel!')
+# Reservar un crucero en el sitio web
+And(/^se muestra la imagen "ARUBA"$/) do
+    expect(page).to have_xpath('//img[@src="images/featured_destination.gif"]')
 end

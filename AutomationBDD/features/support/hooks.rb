@@ -2,7 +2,7 @@ After do
   Capybara.current_session.driver.quit
 end
 
-# carros_renta, contacto
+# carros_renta, contacto, cruceros
 Before '@iniciar_sesion_usuario' do
   page.driver.browser.manage.window.maximize
   visit('/')
