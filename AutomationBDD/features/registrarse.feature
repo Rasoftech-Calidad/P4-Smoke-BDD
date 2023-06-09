@@ -4,7 +4,7 @@ Feature: Registrarse en Mercury Tours
     So Ingresar a la pagina y obtener los beneficios por estar registrado en la página de Mercury Tours
     Background:
         Given acceder a la pagina de "MercuryTours"
-        And acceder al enlace "Register" link
+        And acceder al enlace "Register" de la barra de navegacion
 
     @smoketest
     Scenario: Registrar un Usuario

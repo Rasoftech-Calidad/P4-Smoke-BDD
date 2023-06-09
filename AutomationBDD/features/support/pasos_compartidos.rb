@@ -1,37 +1,36 @@
-#Amplia al maximo el navegador de Chrome
-#Ingresa a la pagina principal de "MercuryTours"
+# TODOS LOS FEATURES
 Given(/^acceder a la pagina de "MercuryTours"$/) do
   page.driver.browser.manage.window.maximize
   visit('/')
 end
   
-#Dirigirse a cierto enlace en el menu de la pagina principal de "MercuryTours"
-And(/^acceder al enlace "([^"]*)" del menu de opciones$/) do |linkText|
+# carros_renta
+When(/^acceder al enlace "([^"]*)" del menu de opciones$/) do |linkText|
   click_link(linkText)
 end
 
-#Dirigirse a cierto enlace en la barra de navegacion de la pagina principal "MercuryTours"
-And(/^acceder al enlace "([^"]*)" de la barra de navegacion$/) do |linkText|
+# 
+When(/^acceder al enlace "([^"]*)" de la barra de navegacion$/) do |linkText|
   click_link(linkText)
 end
+
+# carros_renta
+Then(/^se muestra el mensaje "([^"]*)" en el sitio web$/) do |message|
+  expect(page).to have_content(message)
+end
   
-#Volver a la pagina principal de "MercuryTours"
-And(/^presionar la imagen de boton "BACK TO HOME"$/) do
-  xpath = '/html/body/div[2]/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr[1]/td[2]/table/tbody/tr[2]/td/a/img'
+# carros_renta 
+And(/^presionar la imagen de boton "BACK TO HOME" para volver$/) do
+  xpath = '/html/body/div[2]/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr[1]/td[2]/table/tbody/tr[4]/td/a/img'
   find(:xpath, xpath).click
 end
 
-#se muestra la imagen "UNDER CONSTRUCTION"
-Then(/^se muestra la imagen "UNDER CONSTRUCTION"$/) do
+# carros_renta
+And(/^se muestra la imagen "UNDER CONSTRUCTION"$/) do
   expect(page).to have_xpath('//img[@src="images/mast_construction.gif"]')
 end
 
-#se muestra la imagen "FLIGHT FINDER"
+# 
 Then(/^se muestra la imagen "FLIGHT FINDER"$/) do
   expect(page).to have_xpath('//img[@src="images/mast_flightfinder.gif"]')
-end
-
-#se muestra el mensaje "This section of our web site is currently under construction.   Sorry for any inconvienece."
-And('se muestra el mensaje "This section of our web site is currently under construction.   Sorry for any inconvienece."') do
-  expect(page).to have_content('This section of our web site is currently under construction.   Sorry for any inconvienece.')
 end

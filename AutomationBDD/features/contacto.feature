@@ -5,7 +5,7 @@ Feature: Acceder a contacto en "MercuryTours"
 
 Background:
     Given acceder a la pagina de "MercuryTours"
-      And acceder al enlace "CONTACT" en la barra de navegacion
+      And acceder al enlace "CONTACT" de la barra de navegacion
 
 Scenario: Regresar a la pagina de "MercuryTours" cuando falla la pagina de contacto
     Then se muestra la imagen "UNDER CONSTRUCTION"

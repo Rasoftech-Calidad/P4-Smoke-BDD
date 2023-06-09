@@ -5,7 +5,7 @@ Feature: Acceder a soporte en "MercuryTours"
 
 Background:
     Given acceder a la pagina de "MercuryTours"
-      And acceder al enlace "SUPPORT" en la barra de navegacion
+      And acceder al enlace "SUPPORT" de la barra de navegacion
 
 Scenario: Regresar a la pagina de "MercuryTours" cuando falla la pagina de soporte
     Then se muestra la imagen "UNDER CONSTRUCTION"

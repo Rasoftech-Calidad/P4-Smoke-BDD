@@ -5,8 +5,8 @@ Feature: Acceder a perfil en "MercuryTours"
 
 Background:
     Given acceder a la pagina de "MercuryTours"
-      And acceder al enlace "Flights" en el menu de opciones
-      And acceder al enlace "PROFILE" en la barra de navegacion
+      And acceder al enlace "Flights" del menu de opciones
+      And acceder al enlace "PROFILE" de la barra de navegacion
 
 Scenario: Regresar a la pagina de "MercuryTours" cuando falla la pagina de perfil
     Then se muestra la imagen "FLIGHT FINDER"
