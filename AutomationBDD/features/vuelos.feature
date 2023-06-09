@@ -7,6 +7,7 @@ Background:
     Given acceder a la pagina de "MercuryTours"
       And acceder al enlace "Flights" del menu de opciones
 
+@smoketest
 Scenario: Regresar a la pagina de "MercuryTours" cuando falla la reserva de un vuelo
     When presionar la imagen de boton "Continue->" para continuar
     Then se muestra el mensaje "After flight finder - No Seats Avaialble" en el sitio web
@@ -33,6 +34,7 @@ Scenario: Buscar vuelo no valido debido a fecha de salida adelantada a la fecha 
       And presionar la imagen de boton "Continue->" para continuar
     Then se muestra el mensaje "Invalid Date Range" en el sitio web
 
+@smoketest
 Scenario: Reservar un vuelo totalmente personalizado
     When ingrese los campos requeridos como se muestra a continuación para el vuelo
       | Type:           |  One Way            |
@@ -41,8 +43,8 @@ Scenario: Reservar un vuelo totalmente personalizado
       | On:             |  December 31        |
       | Arriving In:    |  Zurich             |
       | Returning:      |  December 31        | 
-      | Service Class:  | First class         |
-      | Airline:        | Blue Skies Airlines |
+      | Service Class:  |  First class        |
+      | Airline:        |  Blue Skies Airlines|
       And presionar la imagen de boton "Continue->" para continuar
     Then se muestra el mensaje "successful booking!" en el sitio web
 
@@ -54,11 +56,12 @@ Scenario: Buscar un vuelo en un dia inexistente
       | On:             |  February 31        |
       | Arriving In:    |  Zurich             |
       | Returning:      |  April 10           | 
-      | Service Class:  | First class         |
-      | Airline:        | Blue Skies Airlines |
+      | Service Class:  |  First class        |
+      | Airline:        |  Blue Skies Airlines|
       And presionar la imagen de boton "Continue->" para continuar
     Then se muestra el mensaje "Invalid Date" en el sitio web
 
+@smoketest
 @iniciar_sesion_usuario
 Scenario: Reservar un vuelo con un usuario ya registrado
     When ingrese los campos requeridos como se muestra a continuación para el vuelo

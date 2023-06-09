@@ -23,11 +23,10 @@ Scenario Outline: Iniciar sesion con credenciales incorrectos desde pagina de in
     When acceder al enlace "SIGN-ON" de la barra de navegacion
     And ingreso un "<usuario>" y "<contraseña>" incorrectos
     And presiono el boton "Submit"
-    Then deberia ver el mensaje "Enter your userName and password correct"
+    Then se muestra el mensaje "Enter your userName and password correct" en el sitio web
 Examples:
     | usuario          | contraseña          |
     | incorrectuserX71 | incorrectpassX71    |
-    |                  |                     |
 
 @smoketest
 Scenario Outline: Iniciar sesion con credenciales correctos desde la pagina principal
@@ -46,8 +45,7 @@ Scenario Outline: Iniciar sesion con credenciales incorrectos desde la pagina pr
     When quiero iniciar sesion desde los campos de entrada en la pagina principal de MercuryTours
     And ingreso un "<usuario>" y "<contraseña>" incorrectos en la pagina principal
     And presiono el boton "Submit"
-    Then deberia ver el mensaje "Enter your userName and password correct"
+    Then se muestra el mensaje "Enter your userName and password correct" en el sitio web
 Examples:
     | usuario          | contraseña          |
     | incorrectuserX71 | incorrectpassX71    |
-    |                  |                     |
