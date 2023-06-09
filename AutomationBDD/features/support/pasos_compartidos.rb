@@ -24,9 +24,15 @@ And(/^se muestra la imagen "UNDER CONSTRUCTION"$/) do
   expect(page).to have_xpath('//img[@src="images/mast_construction.gif"]')
 end
 
-# carros_renta, contacto, cruceros, destinos, hoteles, vacaciones, itinerarios, perfil, soporte
+# carros_renta, contacto, cruceros, destinos, hoteles, vacaciones, soporte
 And(/^presionar la imagen de boton "BACK TO HOME" para volver$/) do
   xpath = '/html/body/div[2]/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr[1]/td[2]/table/tbody/tr[4]/td/a/img'
+  find(:xpath, xpath).click
+end
+
+# itinerarios, perfil
+And(/^presionar la imagen de boton "BACK TO HOME" para volver desde la barra de navegacion$/) do
+  xpath = '/html/body/div[2]/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr[1]/td[2]/table/tbody/tr[2]/td/a/img'   
   find(:xpath, xpath).click
 end
 

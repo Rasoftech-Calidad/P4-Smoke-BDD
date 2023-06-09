@@ -14,7 +14,7 @@ Scenario: Pedir una descripcion al itinerario en el sitio web
 Scenario: Regresar a la pagina de "MercuryTours" cuando falla la pagina de itinerarios
     Then presionar la imagen de boton "Continue->" para continuar
     Then se muestra el mensaje "After flight finder - No Seats Avaialble" en el sitio web
-      And presionar la imagen de boton "BACK TO HOME" para volver
+      And presionar la imagen de boton "BACK TO HOME" para volver desde la barra de navegacion
 
 @iniciar_sesion_usuario
 Scenario: Acceder a la pagina de itinerarios como un usuario ya registrado
