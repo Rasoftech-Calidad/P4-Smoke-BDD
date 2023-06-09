@@ -9,12 +9,12 @@ When(/^acceder al enlace "([^"]*)" del menu de opciones$/) do |linkText|
   click_link(linkText)
 end
 
-# contacto, itinerarios, perfil, soporte
+# contacto, itinerarios, perfil, soporte, registrarse
 When(/^acceder al enlace "([^"]*)" de la barra de navegacion$/) do |linkText|
   click_link(linkText)
 end
 
-# carros_renta, contacto, cruceros, destinos, hoteles, vacaciones, itinerarios, perfil, soporte, vuelos
+# carros_renta, contacto, cruceros, destinos, hoteles, vacaciones, itinerarios, perfil, soporte, vuelos, registrarse
 Then(/^se muestra el mensaje "([^"]*)" en el sitio web$/) do |message|
   expect(page).to have_content(message)
 end

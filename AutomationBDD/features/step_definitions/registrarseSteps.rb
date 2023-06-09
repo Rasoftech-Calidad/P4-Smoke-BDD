@@ -1,3 +1,4 @@
+# TODOS LOS ESCENARIOS
 When(/^Ingreso los campos como se muestra a continuacion$/) do |table|
     data = table.rows_hash
     data.each_pair do |key, value|
@@ -34,15 +35,19 @@ When(/^Ingreso los campos como se muestra a continuacion$/) do |table|
     end
 end
 
-When(/^Presionar el boton "([^"]*)"$/) do |buttonName|
+# TODOS LOS ESCENARIOS
+And(/^Presionar el boton "([^"]*)"$/) do |buttonName|
     click_button(buttonName) 
-  end
+end
+
+# Registrar un Usuario
 Then(/^Se muestra el mensaje de confirmación$/) do
     greeting = "Dear"+" "+@name+" "+@lastName 	
     expect(page).to have_content(greeting)
 end
 
-Then(/^Se muestra el mensaje de error "([^"]*)"$/) do |errorMessage|
-    expect(page).to have_content(errorMessage)
+# Regresar a la pagina de "MercuryTours" cuando falla el registro de usuarios
+# Registrar un Usuario
+And(/^se muestra la imagen "REGISTER"$/) do
+    expect(page).to have_xpath('//img[@src="images/mast_register.gif"]')
 end
-
