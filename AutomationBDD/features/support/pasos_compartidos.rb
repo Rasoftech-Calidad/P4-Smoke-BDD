@@ -4,7 +4,7 @@ Given(/^acceder a la pagina de "MercuryTours"$/) do
   visit('/')
 end
   
-# carros_renta, cruceros, destinos, hoteles, vacaciones, itinerarios, perfil
+# carros_renta, cruceros, destinos, hoteles, vacaciones, itinerarios, perfil, vuelos
 When(/^acceder al enlace "([^"]*)" del menu de opciones$/) do |linkText|
   click_link(linkText)
 end
@@ -14,7 +14,7 @@ When(/^acceder al enlace "([^"]*)" de la barra de navegacion$/) do |linkText|
   click_link(linkText)
 end
 
-# carros_renta, contacto, cruceros, destinos, hoteles, vacaciones, itinerarios, perfil, soporte
+# carros_renta, contacto, cruceros, destinos, hoteles, vacaciones, itinerarios, perfil, soporte, vuelos
 Then(/^se muestra el mensaje "([^"]*)" en el sitio web$/) do |message|
   expect(page).to have_content(message)
 end
@@ -30,13 +30,13 @@ And(/^presionar la imagen de boton "BACK TO HOME" para volver$/) do
   find(:xpath, xpath).click
 end
 
-# itinerarios, perfil
+# itinerarios, perfil, vuelos
 And(/^presionar la imagen de boton "BACK TO HOME" para volver desde la barra de navegacion$/) do
   xpath = '/html/body/div[2]/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr[1]/td[2]/table/tbody/tr[2]/td/a/img'   
   find(:xpath, xpath).click
 end
 
-# itinerarios, perfil
+# itinerarios, perfil, vuelos
 Then(/^presionar la imagen de boton "Continue->" para continuar$/) do
   xpath = '/html/body/div[2]/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[5]/td/form/table/tbody/tr[14]/td/input'
   find(:xpath, xpath).click
