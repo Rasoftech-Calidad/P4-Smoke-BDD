@@ -5,18 +5,17 @@ Feature: Acceder a perfil en "MercuryTours"
 
 Background:
     Given acceder a la pagina de "MercuryTours"
-      And acceder al enlace "Flights" del menu de opciones
-      And acceder al enlace "PROFILE" de la barra de navegacion
-
-Scenario: Regresar a la pagina de "MercuryTours" cuando falla la pagina de perfil
-    Then se muestra la imagen "FLIGHT FINDER"
-        And se muestra el mensaje "Use our Flight Finder to search for the lowest fare on participating airlines. Once you've booked your flight, don't forget to visit the Mercury Tours Hotel Finder to reserve lodging in your destination city."
+    When acceder al enlace "Flights" del menu de opciones
+    When acceder al enlace "PROFILE" de la barra de navegacion
 
 Scenario: Editar informacion del perfil en el sitio web
-    Then se muestra el mensaje "successful changes!"
-      And presionar la imagen de boton "BACK TO HOME"
+    Then se muestra el mensaje "successful changes!" en el sitio web
 
+Scenario: Regresar a la pagina de "MercuryTours" cuando falla la pagina de perfil
+    Then presionar la imagen de boton "Continue->" para continuar
+    Then se muestra el mensaje "After flight finder - No Seats Avaialble" en el sitio web
+      And presionar la imagen de boton "BACK TO HOME" para volver
+      
 @iniciar_sesion_usuario
 Scenario: Acceder a la pagina de perfil como un usuario ya registrado
-  Then se muestra la imagen "FLIGHT FINDER"
-    And se muestra el mensaje "Use our Flight Finder to search for the lowest fare on participating airlines. Once you've booked your flight, don't forget to visit the Mercury Tours Hotel Finder to reserve lodging in your destination city."
+    Then se muestra el mensaje "Welcome to PROFILE" en el sitio web

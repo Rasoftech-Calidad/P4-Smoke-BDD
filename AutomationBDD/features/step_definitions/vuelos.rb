@@ -9,6 +9,11 @@ And('muestra el mensaje "After flight finder - No Seats Avaialble"') do
     expect(page).to have_content('After flight finder - No Seats Avaialble')
 end
 
+# itinerarios
+And(/^se muestra la imagen "FLIGHT FINDER"$/) do
+  expect(page).to have_xpath('//img[@src="images/mast_flightfinder.gif"]')
+end
+
 #When ingrese los campos requeridos como se muestra a continuación para el vuelo
 When('ingrese los campos requeridos como se muestra a continuación para el vuelo') do |table|
     data = table.rows_hash
