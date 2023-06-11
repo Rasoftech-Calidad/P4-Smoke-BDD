@@ -1,5 +1,15 @@
+# Se muestra en un lugar especifico
+Then(/^se muestra el mensaje "([^"]*)" en la parte central del sitio web$/) do |message|
+xpath = '/html/body/div[2]/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr[1]/td[2]/table/tbody/tr[1]/td/p/font/b'
+find(:xpath, xpath).to have_content(message)
+end
+
 # TODOS LOS ESCENARIOS
-When(/^Ingreso los campos como se muestra a continuacion$/) do |table|
+And(/^Presionar el boton "([^"]*)"$/) do |buttonName|
+    click_button(buttonName) 
+end
+
+When(/^Modifico uno de los campos como se muestra a continuacion$/) do |table|
     data = table.rows_hash
     data.each_pair do |key, value|
       case key
@@ -33,22 +43,4 @@ When(/^Ingreso los campos como se muestra a continuacion$/) do |table|
           
       end
     end
-end
-
-# TODOS LOS ESCENARIOS
-And(/^Presionar el boton "([^"]*)".$/) do |buttonName|
-    click_button(buttonName) 
-end
-
-# Registrar un Usuario
-Then(/^Se muestra el mensaje de confirmación$/) do
-    greeting = "Dear"+" "+@name+" "+@lastName
-    xpath = '/html/body/div[2]/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[3]/td'
-    find(:xpath, xpath).to have_content(greeting)
-end
-
-# Regresar a la pagina de "MercuryTours" cuando falla el registro de usuarios
-# Registrar un Usuario
-And(/^se muestra la imagen "REGISTER"$/) do
-    expect(page).to have_xpath('//img[@src="images/mast_register.gif"]')
 end
