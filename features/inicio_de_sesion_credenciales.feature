@@ -27,7 +27,7 @@ Examples:
     | usuario          | contraseña          |
     | incorrectuserX71 | incorrectpassX71    |
     |                  |                     |
-
+@lol
 Scenario Outline: Iniciar sesion exitosamente desde el menu "SIGN-ON"
     When acceder al enlace "SIGN-ON" de la barra de navegacion
     And ingreso un "<usuario>" y "<contraseña>" correctos
