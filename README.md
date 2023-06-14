@@ -33,3 +33,6 @@ cucumber -t @smoketest --publish-quiet
 ```
 cucumber features --publish-quiet
 ```
+
+## Reporte de ejecucion:
+En la raíz de este proyecto se encuentra el archivo `REPORT.htm`, el cual debe abrir con un navegador para ver los resultados de una ejecución completamente exitosa y sin percances ocasionados por el ambiente de pruebas (dispositivo, red, etc).
