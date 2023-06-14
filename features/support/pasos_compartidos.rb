@@ -2,6 +2,7 @@
 Given(/^acceder a la pagina de "MercuryTours"$/) do
   page.driver.browser.manage.window.maximize
   visit('/')
+  visit('/')
 end
   
 # carros_renta, cruceros, destinos, hoteles, vacaciones, itinerarios, perfil, vuelos
