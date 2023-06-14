@@ -4,14 +4,6 @@ When('quiero iniciar sesion desde los campos de entrada en la pagina principal d
     find(:xpath, home_menuprincipal).click
 end
 
-# And ingreso un "<usuario>" y "<contraseña>" correctos
-When('ingreso un {string} y {string} correctos') do |string, string2|
-    username_input = 'body > div:nth-child(5) > table > tbody > tr > td:nth-child(2) > table > tbody > tr:nth-child(4) > td > table > tbody > tr > td:nth-child(2) > table > tbody > tr:nth-child(5) > td > form > table > tbody > tr:nth-child(1) > td:nth-child(2) > input'
-    password_input = 'body > div:nth-child(5) > table > tbody > tr > td:nth-child(2) > table > tbody > tr:nth-child(4) > td > table > tbody > tr > td:nth-child(2) > table > tbody > tr:nth-child(5) > td > form > table > tbody > tr:nth-child(2) > td:nth-child(2) > input[type=password]'
-    find(:css, username_input).fill_in with: string
-    find(:css, password_input).fill_in with: string2
-end
-
 # And ingreso un "<usuario>" y "<contraseña>" incorrectos
 When('ingreso un {string} y {string} incorrectos') do |string, string2|
     username_input = 'body > div:nth-child(5) > table > tbody > tr > td:nth-child(2) > table > tbody > tr:nth-child(4) > td > table > tbody > tr > td:nth-child(2) > table > tbody > tr:nth-child(5) > td > form > table > tbody > tr:nth-child(1) > td:nth-child(2) > input'
@@ -36,11 +28,6 @@ When('ingreso un {string} y {string} incorrectos en la pagina principal') do |st
     find(:xpath, username_input).click
     find(:xpath, username_input).fill_in with: string
     find(:xpath, password_input).fill_in with: string2
-end
-
-# And presiono el boton "Submit"
-When('presiono el boton {string}') do |string|
-    click_button(string)
 end
 
 # Then deberia ver el mensaje "Login Succesfully"
