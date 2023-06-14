@@ -5,7 +5,6 @@ When('quiero iniciar sesion desde los campos de entrada en la pagina principal d
 end
 
 # And ingreso un "<usuario>" y "<contraseña>" correctos
-@pepe
 When('ingreso un {string} y {string} correctos') do |string, string2|
     username_input = 'body > div:nth-child(5) > table > tbody > tr > td:nth-child(2) > table > tbody > tr:nth-child(4) > td > table > tbody > tr > td:nth-child(2) > table > tbody > tr:nth-child(5) > td > form > table > tbody > tr:nth-child(1) > td:nth-child(2) > input'
     password_input = 'body > div:nth-child(5) > table > tbody > tr > td:nth-child(2) > table > tbody > tr:nth-child(4) > td > table > tbody > tr > td:nth-child(2) > table > tbody > tr:nth-child(5) > td > form > table > tbody > tr:nth-child(2) > td:nth-child(2) > input[type=password]'

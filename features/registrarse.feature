@@ -36,7 +36,7 @@ Feature: Registrarse en Mercury Tours
         And Presionar el boton "submit".
         Then Se muestra el mensaje de confirmación
 
-    @smoketest
+
     Scenario: Al registrar un usuario con el campo de "User Name" vacio deberia mostrar una alerta correspondiente
         When Ingreso los campos como se muestra a continuacion
             | First Name:       | Gabriel            |
@@ -71,7 +71,7 @@ Feature: Registrarse en Mercury Tours
         And Presionar el boton "submit".
         Then se muestra el mensaje "PAssword and con.password does not match" en el sitio web
 
-    @smoketest
+
     Scenario: Al registrar un usuario con una contraseña demasiado corta deberia mostrar la alerta correspondiente
         When Ingreso los campos como se muestra a continuacion
             | First Name:       | Gabriel            |
@@ -89,7 +89,7 @@ Feature: Registrarse en Mercury Tours
         And Presionar el boton "submit".
         Then se muestra el mensaje "Password too short" en el sitio web
 
-    @smoketest
+
     Scenario: Al registrar un usuario con un E-mail con un formato incorrecto deberia mostrar la alerta correspondiente
         When Ingreso los campos como se muestra a continuacion
             | First Name:       | Gabriel            |
