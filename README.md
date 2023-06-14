@@ -22,7 +22,7 @@ Enlace del sitio MercuryTours: https://demo.guru99.com/test/newtours
 ## Ejecutar SmokeTest
 Para ejecutar los comandos, se necesita clonar este repositorio e ingresar al directorio "P4-Smoke-BDD" desde una linea de comandos.
 
-En la linea de comandos podra ejecurar los siguientes comandos:
+En la linea de comandos podra ejecutar los siguientes comandos:
 
 ### Ejecutar solo las pruebas del SmokeTest (BVT):
 ```
