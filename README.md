@@ -1,8 +1,5 @@
 # P4-Smoke-BDD
 Practica #4 de la materia de gestion de calidad. Realizar smoke testing, usando BDD para establecer lenguaje comun y automatizar pruebas.
-# Enlaces
-Trello: https://trello.com/b/ohBNgY0x/practica-4-automatizaci%C3%B3n
-DEMO: https://docs.google.com/presentation/d/1Vek6z-hKZ_PFNzgZfhhzb9xz_rdaB1cc/edit?usp=sharing&ouid=115374638990980240919&rtpof=true&sd=true
 
 Este proyecto consiste en crear escenarios de prueba para el sitio "Mercury tours" y automatizarlas
 Para esto se utilizo:
@@ -23,11 +20,11 @@ Enlace del sitio MercuryTours: https://demo.guru99.com/test/newtours
 
 
 ## Ejecutar SmokeTest
-Para ejecutar los comandos, se necesita clonar este repositorio e ingresar al directorio "AutomationBDD" desde una linea de comandos.
+Para ejecutar los comandos, se necesita clonar este repositorio e ingresar al directorio "P4-Smoke-BDD" desde una linea de comandos.
 
 En la linea de comandos podra ejecurar los siguientes comandos:
 
-### Ejecutar solo el SmokeTest:
+### Ejecutar solo las pruebas del SmokeTest (BVT):
 ```
 cucumber -t @smoketest --publish-quiet
 ```
