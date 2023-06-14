@@ -3,7 +3,11 @@ require 'capybara'
 require 'capybara/dsl'
 require 'capybara/cucumber'
 #require 'capybara-screenshot/cucumber'
-require_relative 'pasos_compartidos'
+require_relative 'images'
+require_relative 'links'
+require_relative 'messages'
+require_relative 'xpaths'
+require_relative 'browser'
 
 #PTravel Settings
 ENV['USER']="Rasoftech"
